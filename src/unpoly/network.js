@@ -693,6 +693,8 @@ up.network = (function() {
   @function up.network.abort
   @param {up.Request|boolean|Function(up.Request): boolean} [matcher=true]
     If this argument is omitted, all pending requests are aborted.
+  @param {string} [reason='Request was aborted']
+    A reason for why the request was aborted.
   @stable
   */
   function abortRequests(...args) {
@@ -704,7 +706,7 @@ up.network = (function() {
 
   @function up.network.abortSubtree
   @param {Element} element
-  @experimental
+  @internal
   */
   function abortSubtree(elements, excusedRequest) {
     const testFn = (request) => request.isPartOfSubtree(elements)
