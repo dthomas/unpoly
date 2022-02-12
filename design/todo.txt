@@ -19,6 +19,9 @@ TODOs for next release
 Concurrency
 -----------
 
+- Consider renaming up.Request#targetElements to just #elements or #fragments
+  - However, if we ever wanted to expose this property in up:link:follow (to get a preview of what's being replaced), #elements would be too generic a name
+- Can we get rid of excerpt argument now that most aborting happens within up.fragment?
 - Introduce new function up.fragment.abort(fragment)
 - Rename up.render({ solo }) to up.render({ abort })
   - Use up.fragment.abort() internally
@@ -83,6 +86,7 @@ Concurrency
 Various changes
 ---------------
 
+- up.form.submitButtons is documented, but not public
 - Change abort(reason) to abort({ reason })
   - In up.Queue#abort
   - In up.network.abort()
