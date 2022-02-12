@@ -86,7 +86,6 @@ Concurrency
 Various changes
 ---------------
 
-- up.form.submitButtons is documented, but not public
 - Change abort(reason) to abort({ reason })
   - In up.Queue#abort
   - In up.network.abort()
